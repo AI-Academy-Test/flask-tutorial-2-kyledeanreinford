@@ -1,0 +1,17 @@
+{
+  "name": "Flask Starter",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "forwardPorts": [5001, 5432],
+  "postCreateCommand": "bash .devcontainer/set-up-environment.sh",
+  "runArgs": [
+    "--mount",
+    "type=volume,target=${containerWorkspaceFolder}/.idea",
+    "--mount",
+    "type=volume,target=${containerWorkspaceFolder}/venv"
+  ],
+  "workspaceFolder": "/workspace",
+  "containerEnv": {
+    "DATABASE_URL": "postgresql://localhost:5432/jumpstart_development?user=jumpstart&password=jumpstart"
+  }
+}
