@@ -16,4 +16,4 @@ class TestMathSkills(TestCase):
         self.assertEqual(1 - 1, 0)
 
     def test_bad_at_math(self):
-        self.assertEqual(1 + 1, 3)
+        self.assertEqual(1 + 1, 2)
